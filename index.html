@@ -7,8 +7,18 @@
     <style> body {padding: 0; margin: 0;} </style>
     <script src="p5.min.js"></script>
     <script src="start.js"></script>
-    <!script src="lol.js"></script>
+    <script src=main.js defer />
   </head>
   <body>
+  <canvas id="gc" width="400" height="400"></canvas>
   </body>
 </html>
+
+
+window.onload = function() {
+   canv = document.getElementById("gc");
+   ctx = canv.getContext("2d");
+   document.addEventListener("keydown", keyPush);
+   setup();
+   setInterval(game, 200);
+}
